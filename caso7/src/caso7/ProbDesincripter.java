@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author jonac
  */
 public class ProbDesincripter {
-
+    
     public ProbDesincripter(){        
     }
     
@@ -21,5 +21,5 @@ public class ProbDesincripter {
         ArrayList letAttempts=new ArrayList();
         
     }
-     
+    
 }
