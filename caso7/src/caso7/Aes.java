@@ -59,6 +59,8 @@ public class Aes {
 		}
 		return null;
 	}
+        
+        
 
 	public static String decrypt(String strToDecrypt, String secret) 
 	{
@@ -76,18 +78,4 @@ public class Aes {
 		return null;
 	}
         
-        public static void main(String[] args) 
-        {
-                /*We wil use "29dh120adk103" as the key
-                * first param is the text to encrypt, second one the key
-                * returns the text encrypted*/
-                String encryptedString = Aes.encrypt("Hello sir than II", "29dh120adk103") ;
-                
-                //using the encrypted text and the respective key, return the real text
-                String decryptedString = Aes.decrypt(encryptedString, "29dh120adk103") ;
-                
-                //test
-                System.out.println(encryptedString);
-                System.out.println(decryptedString);
-        }
 }
