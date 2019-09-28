@@ -10,15 +10,9 @@ package caso7;
  * @author jonac
  */
 public class attemptKey {
-    String letter;
-    int number;
-    float likelyhood;
-
-    public attemptKey(String pLetter, int pNumber, float pPorcentaje) {
-        letter=pLetter;
-        number=pNumber;
-        likelyhood=pPorcentaje;
-    }
+    private String letter;
+    private int number;
+    private String message;
 
     public String getLetter() {
         return letter;
@@ -28,10 +22,14 @@ public class attemptKey {
         return number;
     }
 
-    public float getLikelyhood() {
-        return likelyhood;
+    public String getMessage() {
+        return message;
     }
-    
-    
+
+    public attemptKey(String letter, int number, String message) {
+        this.letter = letter;
+        this.number = number;
+        this.message = message;
+    }
     
 }
