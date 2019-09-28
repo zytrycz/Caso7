@@ -88,4 +88,42 @@ public class ProbDesincripter {
             pNumeros.add(new tuple(numero, Globals.getMAXPERCENT()));
         }
     }
-}
+    
+    public void getTops(ArrayList<tuple> pLetras, ArrayList<tuple>  pNumbers, int pSizeNumbers, int pSizeLeters){
+        int maxProb=0;
+        tuple auxTuple= new tuple("0", 0);
+        ArrayList<tuple> chosenLetters=new ArrayList<>();
+        int maxChosen=7;
+        while(maxChosen>0){
+            for(int index=0;index<pLetras.size();index++)
+                if(pLetras.get(index).getProbability()>maxProb){
+                    auxTuple=pLetras.get(index);
+                    maxProb=pLetras.get(index).getProbability();
+                }
+            maxProb=0;
+            chosenLetters.add(new tuple(auxTuple.getValue(), auxTuple.getProbability()));
+            pLetras.remove(auxTuple);
+            maxChosen--;       
+        }
+        
+        maxChosen=3;
+        ArrayList<tuple> chosenNumbers=new ArrayList<>();
+        while(maxChosen>0){
+            for(int index=0;index<pNumbers.size();index++)
+                if(pNumbers.get(index).getProbability()>maxProb){
+                    auxTuple=pNumbers.get(index);
+                    maxProb=pNumbers.get(index).getProbability();
+                }
+            maxProb=0;
+            chosenNumbers.add(new tuple(auxTuple.getValue(), auxTuple.getProbability()));
+            pNumbers.remove(auxTuple);
+            maxChosen--;       
+        }
+        pLetras=chosenLetters;
+        pNumbers=chosenNumbers;
+    }  
+    
+    
+    
+    }
+
