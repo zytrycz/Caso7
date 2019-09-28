@@ -14,15 +14,23 @@ import java.util.ArrayList;
 public class caso7 {
     
     public void getTops(ArrayList<tuple> pLetras, ArrayList<tuple>  pNumbers, int pSizeNumbers, int pSizeLeters){
-        ArrayList finalNumbbers = new ArrayList();
-        ArrayList finalLeters = new ArrayList();
-        tuple toAdd;
         
-        for (int index = 0; index < pSizeNumbers; index++){        
+        for (int index = 0; index < pSizeNumbers-1; index++){        
+            if ( pNumbers.get(index).getProbability() < pNumbers.get(index+1).getProbability() ){
+                tuple auxiliar = pNumbers.get(index);
+                pNumbers.set(index, pNumbers.get(index+1) );
+                pNumbers.set(index+1, auxiliar);
+            }
+            
         }
         
-        for (int index = 0; index < pSizeLeters; index++){
-            
+        
+        for (int index = 0; index < pSizeLeters-1; index++){
+             if ( pLetras.get(index).getProbability() < pLetras.get(index+1).getProbability() ){
+                tuple auxiliar = pLetras.get(index);
+                pLetras.set(index, pLetras.get(index+1) );
+                pLetras.set(index+1, auxiliar);
+            }
         }
         
     
