@@ -25,6 +25,14 @@ public class tuple {
     public int getProbability() {
         return probability;
     }
+
+    public void setProbability(int probability) {
+        this.probability = probability;
+    }
+    
+    public void print(){
+        System.out.println("valor "+value+ " es "+ Integer.toString(probability)+"% probable");
+    }
     
 
 }
