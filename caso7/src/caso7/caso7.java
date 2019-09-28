@@ -13,12 +13,22 @@ import java.util.ArrayList;
  */
 public class caso7 {
     
-    public void getTops(ArrayList pLetras, ArrayList pNum){
+    public void getTops(ArrayList<tuple> pLetras, ArrayList<tuple>  pNumbers, int pSizeNumbers, int pSizeLeters){
+        ArrayList finalNumbbers = new ArrayList();
+        ArrayList finalLeters = new ArrayList();
+        tuple toAdd;
+        
+        for (int index = 0; index < pSizeNumbers; index++){        
+        }
+        
+        for (int index = 0; index < pSizeLeters; index++){
+            
+        }
         
     
     }
     
-    public static void main(String[] args) 
+    public  void main(String[] args) 
         {
                 //Encrypte text
                 String encryptedString = "xZwM7BWIpSjYyGFr9rhpEa+cYVtACW7yQKmyN6OYSCv0ZEg9jWbc6lKzzCxRSSIvOvlimQZBMZOYnOwiA9yy3YU8zk4abFSItoW6Wj0ufQ0=";
@@ -33,14 +43,14 @@ public class caso7 {
                 String decryptedString;
                 
                 ProbDesincripter decripter = new ProbDesincripter();
-                ArrayList ltupleLetters = new ArrayList();
-                ArrayList ltupleNumbers = new ArrayList();
+                ArrayList tupleLetters = new ArrayList();
+                ArrayList tupleNumbers = new ArrayList();
 
-                decripter.getKey(encryptedString, key, ltupleLetters ,ltupleNumbers ); //generates 2 arrays of tuples with the form (value, probability)
+                decripter.getKey(encryptedString, key, tupleLetters ,tupleNumbers ); //generates 2 arrays of tuples with the form (value, probability)
                 
                 ArrayList topLetters = new ArrayList();
                 ArrayList topNumbers = new ArrayList();
-                
+                this.getTops(tupleLetters, tupleNumbers, tupleNumbers.size(), tupleLetters.size());
                 
 
                 for(int i=0;i<10;i++){
